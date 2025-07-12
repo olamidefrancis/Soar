@@ -1,0 +1,463 @@
+/* font fanily oswad and jakarta styles below */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+*,
+* ::after,
+* ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+font-size: 62.5%;
+
+}
+
+.container{
+    display:grid;
+    grid-template-columns: [line-start]repeat(12,minmax(min-content,12.5rem)) [line-end];
+    grid-template-rows: repeat(9, min-content);
+    /* background-color: aqua; */
+    /* *----------*----------*----------* Padding */
+  /* 
+        --------------------- Sizing Nature
+        d     = dynamic
+        st    = static
+
+        --------------------- Sizing
+
+        l     = large
+        m     = medium
+        s     = small
+        xs    = extra small
+        c     = customized
+
+          
+        --------------------- Orientation
+        v  = vertical   (top & bottom)
+        h  = horizontal (right & left)
+  */
+
+  /* Dynamic */
+  --padding-d-l-v: calc(2rem + 12vh);
+  --padding-d-l-h: calc(2rem + 12vw);
+
+  --padding-d-mc-v: calc(1rem + 4vh);
+  --padding-d-mc-h: calc(1rem + 4vw);
+
+  --padding-d-m-v: calc(1rem + 2vh);
+  --padding-d-m-h: calc(1rem + 2vw);
+
+  --padding-d-s-h: calc(1rem + 1vw);
+  --padding-d-s-v: calc(1rem + 1vh);
+
+  /* Static */
+  --padding-st-l-h: 3rem;
+  --padding-st-l-v: 2rem;
+
+  --padding-st-m-h: 2.5rem;
+  --padding-st-m-v: 1.5rem;
+
+  --padding-st-s-h: 2rem;
+  --padding-st-s-v: 1rem;
+  --fontsize-small: 2rem;
+  --fontsize-extrsmall: 1rem;
+  /*----------*----------*----------* Typography */
+
+  /* 
+      --------------------- Sizing Nature
+      d     = dynamic
+      st    = static
+      
+      --------------------- Sizing
+      xl    = extra large
+      l     = large
+      m     = medium
+      s     = small
+      xs    = extra small
+      c     = customized
+      
+      --------------------- Family
+      font-family: 'Oswald', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+*/
+
+  /* Dynmaic */
+  --font-size-d-lc: calc(3rem + 3.5vw);
+  --font-size-d-l: calc(2rem + 3vw);
+  --font-size-d-mc: calc(2rem + 2.5vw);
+  --font-size-d-m: calc(1rem + 2vw);
+  --font-size-d-sc: calc(1rem + 1.5vw);
+  --font-size-d-s: calc(1rem + 1vw);
+
+  /* Static */
+  --font-size-st-xl: 4rem;
+  --font-size-st-lc: 3.5rem;
+  --font-size-st-l: 3rem;
+  --font-size-st-mc: 2.5rem;
+  --font-size-st-m: 2rem;
+  --font-size-st-sc: 1.5rem;
+  --font-size-st-s: 1rem;
+
+
+  /* Family */
+  --font-family-title: "Oswald", sans-serif;
+  --font-family-content: "Plus Jakarta Sans", sans-serif;
+
+  --color-lightgray:  rgb(95, 90, 90);
+  --color-profilebg: rgb(50, 48, 48);
+  --color-profhover:  rgb(72, 59, 59);
+  --grid-columnforme: repeat(12,minmax(min-content,12.5rem)) ;
+
+}
+
+.overall-layout {
+  grid-column: line-start / line-end;
+}
+
+.gridplacement{
+    align-self: center;
+    justify-self: center;
+}
+.w{
+    color: white;
+}
+.textprop{
+    text-decoration: none;
+}
+
+.position{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.question{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: solid var(--color-lightgray) 1px;
+    padding-right: 1.5rem;
+    /* position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: yellowgreen; */
+}
+
+.question-sub{
+    display: flex;
+    width: 20rem;
+    height: 3.2rem;
+    border: 1px solid var(--color-lightgray) ;
+    border-top: none;
+    border-bottom: none;
+    
+}
+.ico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+   
+    
+}
+.ico i{
+
+    border: 1px solid var(--color-lightgray) ;
+    border-radius: 100%;
+    padding: 4px;
+    
+}
+
+ .help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-right: 1px solid var(--color-lightgray) ;
+ }
+
+
+.help a{
+
+    font-size: 1.3em;
+    color: var(--color-lightgray);
+}
+
+.profile{
+    display: grid;
+    grid-template-columns:repeat(12,minmax(min-content,12.5rem));
+    background-color: var(--color-profilebg);
+    padding: 0.3rem;
+    color: white;
+
+}
+
+.soar{
+   grid-column: 1/2;
+   align-items: center; 
+  
+}
+
+.women{
+   grid-column: 2/3;
+   align-items: center;
+   transition: all 0.6s ease-in-out;   
+}
+
+.men{
+   grid-column: 3/4;
+   align-items: center;
+   transition: all 0.6s ease-in-out;
+}
+
+.search{
+    grid-column: 5/9;
+    transition: all 0.8s ease-in-out;
+    padding: 0.4rem 0.2rem;
+    display: flex;
+   background-color: white;
+    border-radius: 10px;
+    
+}
+
+.search input{
+   flex-basis: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+   
+
+}
+
+
+.search i{
+    justify-self: end;
+    align-self: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+.person{
+    grid-column: 10/13;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.person i{
+    color: white;
+    font-size: var(--fontsize-small);
+}
+
+.men:hover{
+background-color: var(--color-profhover);
+border: 0.7px solid white;
+border-radius: 10px;
+}
+
+.soar:hover{
+background-color: var(--color-profhover);
+border: 0.7px solid white;
+border-radius: 10px;
+}
+
+.women:hover{
+background-color: var(--color-profhover);
+border: 0.7px solid white;
+border-radius: 10px;
+}
+
+.discount{
+    background-color: var(--color-lightgray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.womenpage{
+   
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.womenpage::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: white;
+    padding-top: 2px;
+    transform: scale(0);
+    transition: transform 0.8s ease-in-out;
+    transform-origin: left;
+}
+
+.womenpage:hover::after{
+
+     transform-origin: left;
+     transform: scale(1);
+}
+.menpage{
+    
+ position: relative;
+    padding-bottom: 4px;
+}
+
+.menpage{
+    /* border: 0.2rem solid white;
+    padding: 0.5rem;
+    width: 10rem; 
+    */
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.menpage::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: white;
+    padding-top: 2px;
+    transform: scale(0);
+    transition: transform 0.8s ease-in-out;
+    transform-origin: left;
+}
+
+.menpage:hover::after{
+
+     transform-origin: left;
+     transform: scale(1);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0.3rem;
+    gap:0.3rem
+}
+
+.new--container{
+    font-family: var(--font-family-content);
+    font-size: var( --fontsize-extrsmall);
+}
+
+.premium{
+  font-family: var(--font-family-content);
+  font-size: var( --fontsize-extrsmall);
+}
+
+.bold--afri{
+    font-family: var(--font-family-content);
+    font-size: var( --fontsize-extrsmall);
+}
+
+.image--display{
+    display: grid;
+    grid-template-columns:repeat(7, 1fr);
+    grid-template-rows: repeat(8,1fr);
+    height: 90vh; 
+   
+}
+
+ .ml1 {
+   height: 100%; 
+   width: 100%;
+   grid-column: 1/-1;
+   grid-row: 1/-1;
+   z-index: -1;
+}
+
+.ml1 img{
+    height: 100%;
+    width:100%;
+    object-fit: contain;
+    
+} 
+
+
+
+.logomain{
+  
+  
+   grid-column: 4/5;
+   grid-row: 5/6;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-self: center;
+   align-self: center;
+}
+.logo{
+    border-radius: 100%;
+    object-fit: contain;
+    height: 50%;
+    width: 50%;
+}
+
+.hamburger{
+    position: fixed;
+}
+
+@media screen and (max-width: 400px){
+     .image--display{
+        height: 150%;
+    }
+    .soar,
+    .women,
+    .men,
+    .discount,
+    .content,
+    .new--container
+    {
+       font-size: 0.5rem;
+    }
+
+
+    .bold--afri,
+    .premium,
+    .menpage,
+    .womenpage
+    {
+       font-size: 0.5rem;  
+    }
+    .search{
+    grid-column: 4/8;
+    }
+
+     .search i{
+         font-size: 0.9rem;
+     }
+
+    .search input{
+  
+       height: 2rem;
+    }
+    .search input::placeholder{
+         font-size: 0.9rem;
+         
+    }
+
+    .person i{
+        font-size: 0.9rem; 
+    }
+
+
+
+}
